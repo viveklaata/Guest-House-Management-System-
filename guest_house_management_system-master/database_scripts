@@ -1,0 +1,328 @@
+Script for admin_table
+
+################################################################################################################
+
+-- phpMyAdmin SQL Dump
+-- version 4.3.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 28, 2016 at 09:35 AM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `db_software`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_table`
+--
+
+CREATE TABLE IF NOT EXISTS `admin_table` (
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_table`
+--
+
+INSERT INTO `admin_table` (`username`, `password`, `id`) VALUES
+('nithin', 'dukati', 1),
+('upendra', 'dukati', 2),
+('kaushtubh', 'dukati', 3),
+('vivek', 'dukati', 4);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin_table`
+--
+ALTER TABLE `admin_table`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin_table`
+--
+ALTER TABLE `admin_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+##############################################################################################################
+
+Script for guest_user
+################################################################################################################
+-- phpMyAdmin SQL Dump
+-- version 4.3.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 28, 2016 at 09:39 AM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `db_software`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guest_user`
+--
+
+CREATE TABLE IF NOT EXISTS `guest_user` (
+  `type` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `age` int(100) NOT NULL,
+  `relationship` varchar(255) NOT NULL,
+  `entry_date` date NOT NULL,
+  `exit_date` date NOT NULL,
+  `no_of_rooms` int(100) NOT NULL,
+  `ldap_id` varchar(255) NOT NULL,
+  `govt_id` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `issued_or_not` tinyint(1) NOT NULL,
+  `id` int(100) NOT NULL,
+  `Created_date` date NOT NULL,
+  `Updated_date` date NOT NULL,
+  `room_type` varchar(255) NOT NULL,
+  `phone_no` varchar(255) NOT NULL,
+  `email_id` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `guest_user`
+--
+
+INSERT INTO `guest_user` (`type`, `name`, `gender`, `age`, `relationship`, `entry_date`, `exit_date`, `no_of_rooms`, `ldap_id`, `govt_id`, `address`, `issued_or_not`, `id`, `Created_date`, `Updated_date`, `room_type`, `phone_no`, `email_id`) VALUES
+(2, 'nithin', 'Male', 11, '', '2016-01-01', '2016-01-07', 1, '', '1234a', 'jodhpur', 1, 15, '2016-03-07', '2016-03-07', 'A', '', ''),
+(1, 'upendra', 'Male', 11, '', '2016-01-01', '2016-01-07', 2, '', '1234b', 'nothing', 1, 16, '2016-03-07', '2016-03-07', 'B', '', ''),
+(1, 'kk', 'Male', 19, '', '2016-01-01', '2016-01-07', 1, '', 'upendra', 'nothing', 1, 17, '2016-03-07', '2016-03-07', '', '', ''),
+(1, 'kkdk', 'Male', 19, '', '2016-01-01', '2016-01-07', 1, '', 'upendra', 'nothing', 1, 18, '2016-03-07', '2016-03-07', '', '', ''),
+(1, 'kkdkd', 'Male', 192, '', '2016-01-01', '2016-01-07', 1, '', 'upendra', 'nothing', 1, 19, '2016-03-07', '2016-03-07', '', '', ''),
+(1, 'kkdkdddddd', 'Male', 0, '', '2016-01-01', '2016-01-07', 1, '', 'upendra', 'nothing', 1, 20, '2016-03-07', '2016-03-07', 'D', '', ''),
+(2, 'kkk', 'Male', 0, '', '2016-01-01', '2016-01-07', 1, '', '', 'bikaner', 1, 21, '2016-03-07', '2016-03-07', 'D', '', ''),
+(2, 'kkk', 'Male', 0, '', '2016-01-01', '2016-01-07', 1, '', '1234h', 'bikaner', 0, 22, '2016-03-07', '2016-03-07', 'D', '', ''),
+(2, 'kkk', 'Male', 11, '', '2016-01-01', '2016-01-07', 1, '', '1234h', 'bikaner', 0, 23, '2016-03-07', '2016-03-07', 'D', '', ''),
+(2, 's', 'F', 1, '', '2016-03-24', '2016-03-16', 1, '', 'scz', 'dfvdfv', 0, 36, '2016-03-09', '2016-03-09', 'C', '', ''),
+(2, 'k', 'M', 1, '', '2016-03-09', '2016-03-10', 1, '', 'kkkkkkkdkdkdkdkdkd', 'sfsdfsfssfsssfsf', 0, 37, '2016-03-09', '2016-03-09', 'C', '', ''),
+(2, 'Upenra', 'Male', 23, '', '0000-00-00', '0000-00-00', 2, '', 'sczsdfsdfsdfsdf', 'D-529,Jasper', 1, 38, '2016-03-09', '2016-03-09', 'C', '07033574365', 'manvendrasinghktp@gmail.com'),
+(1, 'Upendra Singh Chauhan', 'Male', 23, '', '2016-03-08', '2016-03-12', 2, '', 'vivek', 'nothing', 1, 39, '2016-03-09', '2016-03-09', 'D', '+918824661684', 'manvendrasinghktp@gmail.com'),
+(1, 'Upendra Singh Chauhan', 'Male', 20, '', '2016-03-05', '2016-03-11', 1, '', 'vivek', 'nothing', 1, 40, '2016-03-09', '2016-03-09', 'D', '+918824661684', 'manvendrasinghktp@gmail.com'),
+(2, 'Nithin', 'Male', 21, '', '2016-03-13', '2016-03-14', 2, '', '987456123', 'IIT Jodhpur Hostels,Kendranchal Colony', 1, 41, '2016-03-09', '2016-03-09', 'D', '+918824661684', 'manvendrasinghktp@gmail.com'),
+(1, 'nithin', 'Male', 21, '', '2016-03-16', '2016-03-19', 1, '', 'vivek', 'nothing', 0, 42, '2016-03-15', '2016-03-15', 'D', '+918824661684', 'manvendrasinghktp@gmail.com'),
+(1, 'nithin', 'Male', 21, '', '2016-03-16', '2016-03-19', 1, '', 'vivek', 'nothing', 0, 43, '2016-03-15', '2016-03-15', 'D', '+918824661684', 'manvendrasinghktp@gmail.com'),
+(1, 'dhj', 'Male', 23, '', '2016-03-09', '2016-03-10', 1, '', 'vivek', 'nothing', 1, 44, '2016-03-15', '2016-03-15', 'D', '565', '65656@'),
+(1, 'eetet', 'Male', 23, '', '2016-03-06', '2016-03-08', 1, '', 'vivek', 'nothing', 1, 45, '2016-03-15', '2016-03-15', 'D', '45645', '4545@'),
+(1, 'dsvv', 'Male', 23, '', '2016-03-07', '2016-03-09', 1, '', 'vivek', 'nothing', 0, 46, '2016-03-15', '2016-03-15', 'D', '56656', '6fgf@'),
+(1, 'pinki', 'Male', 12, '', '2016-03-06', '2016-03-08', 1, '', 'vivek', 'nothing', 1, 47, '2016-03-15', '2016-03-15', 'D', '12321', 'fkdn@'),
+(1, 'dssdhsd', 'Male', 23, '', '2016-03-08', '2016-03-10', 1, '', 'vivek', 'nothing', 0, 48, '2016-03-15', '2016-03-15', 'D', '36556', 'fgf@'),
+(1, 'thomson', 'Male', 21, '', '2016-03-16', '2016-03-24', 2, '', 'upendra', 'nothing', 1, 49, '2016-03-28', '2016-03-28', 'D', '123698745', 'rr@gmail.com');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `guest_user`
+--
+ALTER TABLE `guest_user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `guest_user`
+--
+ALTER TABLE `guest_user`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+###################################################################################################################
+Script for registered_user
+####################################################################################################################
+-- phpMyAdmin SQL Dump
+-- version 4.3.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 28, 2016 at 09:40 AM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `db_software`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registered_user`
+--
+
+CREATE TABLE IF NOT EXISTS `registered_user` (
+  `id` int(11) NOT NULL,
+  `user_id` varchar(255) NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  `Phone_no` varchar(255) NOT NULL,
+  `Password_hash` varchar(255) NOT NULL,
+  `Address` varchar(255) NOT NULL,
+  `Sex` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `Created_date` date NOT NULL,
+  `Updated_date` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registered_user`
+--
+
+INSERT INTO `registered_user` (`id`, `user_id`, `Name`, `Phone_no`, `Password_hash`, `Address`, `Sex`, `email`, `Created_date`, `Updated_date`) VALUES
+(1, 'nithin', 'nithinv', '886198762', '456', 'jodhpur', 'male', 'ug201310022@iitj.ac.in', '2016-03-06', '2016-03-06'),
+(12, 'upendra', 'upendra singh', '999999999', 'abcd', 'jodhpur', 'male', '123@gmail.com', '2016-03-07', '2016-03-07'),
+(13, 'kaustubh', 'male', '2147483647', 'bukati', 'Delhi', '', 'ug111111@iitj.ac.in', '2016-03-07', '2016-03-07'),
+(15, 'vevek', 'laata', '44444444444', '123', 'bikaner', 'Male', 'gggg@gmail.com', '2016-03-07', '2016-03-07'),
+(16, 'vivek', 'laata', '44444444445', '123', 'bik', 'Male', 'gggg5@gmail.com', '2016-03-07', '2016-03-07'),
+(17, 'xxx', 'xxx', '9999999999', 'xxx', 'efgsfg', 'male', 'kkdk@gmail.com', '2016-03-09', '2016-03-09'),
+(18, 'xxx', 'xxx', '9999999444', '', 'efgsfg', 'male', 'kkdkffffffff@gmail.com', '2016-03-09', '2016-03-09'),
+(19, 'nithin', 'nithin', '8861987677', 'dukati', 'jj', 'male', 'ug201310922@iitj.ac.in', '2016-03-28', '2016-03-28');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `registered_user`
+--
+ALTER TABLE `registered_user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `registered_user`
+--
+ALTER TABLE `registered_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+#####################################################################################################################
+Script for room details
+######################################################################################################################
+-- phpMyAdmin SQL Dump
+-- version 4.3.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 28, 2016 at 09:42 AM
+-- Server version: 5.6.24
+-- PHP Version: 5.6.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `db_software`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room_details`
+--
+
+CREATE TABLE IF NOT EXISTS `room_details` (
+  `id` int(100) NOT NULL,
+  `no_of_beds` int(100) NOT NULL,
+  `status_ac` tinyint(1) NOT NULL,
+  `status_wifi` tinyint(1) NOT NULL,
+  `no_available` int(100) NOT NULL,
+  `Type` varchar(255) NOT NULL,
+  `Prize` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `room_details`
+--
+
+INSERT INTO `room_details` (`id`, `no_of_beds`, `status_ac`, `status_wifi`, `no_available`, `Type`, `Prize`) VALUES
+(1, 1, 0, 0, 37, 'A', 100),
+(2, 2, 0, 1, 24, 'B', 400),
+(3, 1, 1, 0, 19, 'C', 200),
+(4, 2, 1, 1, 22, 'D', 500);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `room_details`
+--
+ALTER TABLE `room_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `room_details`
+--
+ALTER TABLE `room_details`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+################################################################################################################

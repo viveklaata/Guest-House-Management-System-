@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Admin IIT Jodhour</title>
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round">
+	<link rel="stylesheet"  href="css/admin_style.css">
+
+	<style>
+			body {
+						background: #e1c192 url(images/pic06.jpg);
+			}
+		</style>
+</head>
+<body>
+	<div id="login">
+		<h2><span class="fontawesome-lock"></span>Admin Guest House</h2>
+		<form method="POST" name="form1" onsubmit="return validateForm()" action="verify_admin.php" enctype="multipart/form-data" >
+
+			<fieldset>
+				<p><label for="user_id">User Id</label></p>
+				<p><input type="text" id="user_id" name="uid"></p> 
+				<div id ="valid_user_id" ></div>
+
+				<p><label for="user_password">Password</label></p>
+				<p><input type="password" id="user_password" value="" name="pwd"></p> 
+				<div id ="valid_password" ></div>
+
+				<p><input type="submit" value="Sign In"></p>
+			</fieldset>
+		</form>
+	</div> 
+	<script language="javascript">
+	
+    // var x = document.getElementById("input");
+    // x.onclick = function() {validateForm()};
+     var defaultColor = document.getElementById("demail").style.borderColor;
+
+    function validateForm() {
+    	flag = true;
+    if (document.getElementById("user_password").value == null || document.getElementById("user_password").value == "") {
+        document.getElementById("valid_password").innerHTML = "Please Enter Password";
+        document.getElementById("user_password").style.borderColor = 'red';
+        console.log("error");
+        flag = false;
+    }
+
+    if (document.getElementById("user_id").value == null || document.getElementById("user_id").value == "") {
+        document.getElementById("valid_user_id").innerHTML = "Please Enter User Id";
+        document.getElementById("user_id").style.borderColor = 'red';
+        console.log("error");
+        flag = false;
+    }      
+
+    return flag;
+      }
+
+</script>
+
+</body>	
+</html>
